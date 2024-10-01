@@ -246,6 +246,14 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
+              <PropertyValue z:Id="i27">
+                <PropertyName>BaseDataTable</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>resultTable</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
             </PropertyValues>
             <SelectedOptionId i:nil="true" />
             <EnableStatus>true</EnableStatus>
@@ -258,7 +266,7 @@
         <Id>278c947d-51c6-4762-981e-f8abed9ee5a6</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i27">
+          <PropertyValue z:Id="i28">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>rowsValues.Count - 1</_expression>
@@ -266,7 +274,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i28">
+          <PropertyValue z:Id="i29">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>r</_expression>
@@ -282,14 +290,14 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i29" i:type="ExecutedStep">
+      <AbstractStep z:Id="i30" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i30" i:type="ExecutedStep">
+          <AbstractStep z:Id="i31" i:type="ExecutedStep">
             <Childs />
             <Id>172aaebf-47c4-445d-bbea-91e0e581c820</Id>
-            <Parent z:Ref="i29" />
+            <Parent z:Ref="i30" />
             <PropertyValues>
-              <PropertyValue z:Id="i31">
+              <PropertyValue z:Id="i32">
                 <PropertyName>ColumnName</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>$"table{i + 1}"</_expression>
@@ -297,7 +305,7 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i32">
+              <PropertyValue z:Id="i33">
                 <PropertyName>BaseDataTable</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>resultTable</_expression>
@@ -317,7 +325,7 @@
         <Id>3ef10f65-37a2-4f80-8226-1562aa885dba</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i33">
+          <PropertyValue z:Id="i34">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>tables.Count - 1</_expression>
@@ -325,7 +333,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i34">
+          <PropertyValue z:Id="i35">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>i</_expression>
@@ -341,20 +349,20 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i35" i:type="ExecutedStep">
+      <AbstractStep z:Id="i36" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i36" i:type="ExecutedStep">
+          <AbstractStep z:Id="i37" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i37" i:type="ExecutedStep">
+              <AbstractStep z:Id="i38" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i38" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i39" i:type="ExecutedStep">
                     <Childs>
-                      <AbstractStep z:Id="i39" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i40" i:type="ExecutedStep">
                         <Childs />
                         <Id>242f937a-24b9-45be-9a29-3a95c8ed608c</Id>
-                        <Parent z:Ref="i38" />
+                        <Parent z:Ref="i39" />
                         <PropertyValues>
-                          <PropertyValue z:Id="i40">
+                          <PropertyValue z:Id="i41">
                             <PropertyName>Value</PropertyName>
                             <_dataType>Expression</_dataType>
                             <_expression>((DataTable)tables[t]).AsEnumerable().Where(x =&gt; x.ItemArray[0].ToString().Contains(resultTable.Rows[r][0].ToString())).Select(x=&gt;x.ItemArray[1]).First()</_expression>
@@ -362,7 +370,7 @@
                             <_value i:nil="true" />
                             <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                           </PropertyValue>
-                          <PropertyValue z:Id="i41">
+                          <PropertyValue z:Id="i42">
                             <PropertyName>To</PropertyName>
                             <_dataType>Expression</_dataType>
                             <_expression>resultTable.Rows[r][t+1]</_expression>
@@ -380,7 +388,7 @@
                       </AbstractStep>
                     </Childs>
                     <Id>fc2ef46f-117d-47ed-89d2-00b2785760bd</Id>
-                    <Parent z:Ref="i37" />
+                    <Parent z:Ref="i38" />
                     <PropertyValues />
                     <SelectedOptionId i:nil="true" />
                     <EnableStatus>true</EnableStatus>
@@ -389,14 +397,14 @@
                     <Text></Text>
                     <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i42" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i43" i:type="ExecutedStep">
                     <Childs>
-                      <AbstractStep z:Id="i43" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i44" i:type="ExecutedStep">
                         <Childs />
                         <Id>84365e45-1d93-4a00-8fd0-6684f954ce6a</Id>
-                        <Parent z:Ref="i42" />
+                        <Parent z:Ref="i43" />
                         <PropertyValues>
-                          <PropertyValue z:Id="i44">
+                          <PropertyValue z:Id="i45">
                             <PropertyName>Value</PropertyName>
                             <_dataType>Expression</_dataType>
                             <_expression>string.Empty</_expression>
@@ -404,7 +412,7 @@
                             <_value i:nil="true" />
                             <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                           </PropertyValue>
-                          <PropertyValue z:Id="i45">
+                          <PropertyValue z:Id="i46">
                             <PropertyName>To</PropertyName>
                             <_dataType>Expression</_dataType>
                             <_expression>resultTable.Rows[r][t+1]</_expression>
@@ -422,7 +430,7 @@
                       </AbstractStep>
                     </Childs>
                     <Id>be6ea828-dd77-46a8-abfe-7181c459707f</Id>
-                    <Parent z:Ref="i37" />
+                    <Parent z:Ref="i38" />
                     <PropertyValues />
                     <SelectedOptionId i:nil="true" />
                     <EnableStatus>true</EnableStatus>
@@ -433,9 +441,9 @@
                   </AbstractStep>
                 </Childs>
                 <Id>2f0cdcea-32c7-42d3-839d-a60e0b77e6eb</Id>
-                <Parent z:Ref="i36" />
+                <Parent z:Ref="i37" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i46">
+                  <PropertyValue z:Id="i47">
                     <PropertyName>Condition</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>((DataTable)tables[t]).AsEnumerable().Any(x =&gt; x.ItemArray[0].ToString().Contains(resultTable.Rows[r][0].ToString()))</_expression>
@@ -453,9 +461,9 @@
               </AbstractStep>
             </Childs>
             <Id>ceae9afa-cd02-4f14-8944-4a66ca980aae</Id>
-            <Parent z:Ref="i35" />
+            <Parent z:Ref="i36" />
             <PropertyValues>
-              <PropertyValue z:Id="i47">
+              <PropertyValue z:Id="i48">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>tables.Count - 1</_expression>
@@ -463,7 +471,7 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i48">
+              <PropertyValue z:Id="i49">
                 <PropertyName>Index</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>t</_expression>
@@ -483,7 +491,7 @@
         <Id>62932bed-3ae4-481e-b49d-2687f4538c8b</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i49">
+          <PropertyValue z:Id="i50">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>resultTable.Rows.Count - 1</_expression>
@@ -491,7 +499,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i50">
+          <PropertyValue z:Id="i51">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>r</_expression>
@@ -507,12 +515,12 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i51" i:type="ExecutedStep">
+      <AbstractStep z:Id="i52" i:type="ExecutedStep">
         <Childs />
         <Id>ea5a44b2-3106-43a1-8ce6-a3de2a093feb</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i52">
+          <PropertyValue z:Id="i53">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>resultTable</_expression>
@@ -520,7 +528,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i53">
+          <PropertyValue z:Id="i54">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>out_Result</_expression>
@@ -550,14 +558,14 @@
   <Name>SummaryTable.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i54">
+    <Parameter z:Id="i55">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_Data</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i55">
+    <Parameter z:Id="i56">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>out_Result</Name>
