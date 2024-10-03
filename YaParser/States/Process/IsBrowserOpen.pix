@@ -111,18 +111,6 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.If</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i13" i:type="ExecutedStep">
-        <Childs />
-        <Id>1f071fb8-0070-489e-84f2-520d3b123f49</Id>
-        <Parent z:Ref="i2" />
-        <PropertyValues />
-        <SelectedOptionId i:nil="true" />
-        <EnableStatus>true</EnableStatus>
-        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-        <RetryCount>-1</RetryCount>
-        <Text></Text>
-        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
-      </AbstractStep>
     </Childs>
     <Id>3891bb26-59bd-4d7c-bfe2-ac6657ace9e7</Id>
     <Parent i:nil="true" />
@@ -137,14 +125,14 @@
   <Name>IsBrowserOpen.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i14">
+    <Parameter z:Id="i13">
       <DefaultValueExpression>"chrome"</DefaultValueExpression>
       <Description></Description>
       <Name>in_BrowserProcName</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i15">
+    <Parameter z:Id="i14">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>out_BrowserTitle</Name>

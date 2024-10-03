@@ -260,7 +260,7 @@
               </d7p1:ArgumentItem>
               <d7p1:ArgumentItem z:Id="i31">
                 <d7p1:ArgumentName>in_Url</d7p1:ArgumentName>
-                <d7p1:Expression>/*in_Config["Url"].ToString()*/"https://market.yandex.ru/catalog--noutbuki/26895412/list"</d7p1:Expression>
+                <d7p1:Expression>in_Config["Url"].ToString()</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
             </_value>
@@ -275,50 +275,13 @@
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i32" i:type="ExecutedStep">
-        <Childs />
-        <Id>877aab72-4b8c-4d91-84ff-66620c58e01c</Id>
-        <Parent z:Ref="i2" />
-        <PropertyValues>
-          <PropertyValue z:Id="i33">
-            <PropertyName>Timeout</PropertyName>
-            <_dataType>Expression</_dataType>
-            <_expression>60</_expression>
-            <_screenShotBase64 i:nil="true" />
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-          <PropertyValue z:Id="i34">
-            <PropertyName>TabUrl</PropertyName>
-            <_dataType>Expression</_dataType>
-            <_expression>"https://market.yandex.ru/catalog--noutbuki/26895412/list"</_expression>
-            <_screenShotBase64 i:nil="true" />
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-          <PropertyValue z:Id="i35">
-            <PropertyName>Browser</PropertyName>
-            <_dataType>Expression</_dataType>
-            <_expression>browser</_expression>
-            <_screenShotBase64 i:nil="true" />
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-        </PropertyValues>
-        <SelectedOptionId>2</SelectedOptionId>
-        <EnableStatus>false</EnableStatus>
-        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-        <RetryCount>-1</RetryCount>
-        <Text></Text>
-        <_activityFullName>Activities.Web.LaunchChrome</_activityFullName>
-      </AbstractStep>
-      <AbstractStep z:Id="i36" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i37" i:type="ExecutedStep">
+          <AbstractStep z:Id="i33" i:type="ExecutedStep">
             <Childs />
             <Id>c4cfccf6-b9ec-4818-84a5-24ec87a9e8cb</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i32" />
             <PropertyValues>
-              <PropertyValue z:Id="i38">
+              <PropertyValue z:Id="i34">
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>(Dictionary&lt;string, object&gt;)null</_expression>
@@ -326,7 +289,7 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i39">
+              <PropertyValue z:Id="i35">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>data</_expression>
@@ -342,12 +305,12 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i40" i:type="ExecutedStep">
+          <AbstractStep z:Id="i36" i:type="ExecutedStep">
             <Childs />
             <Id>5a194596-105a-4a13-a4c7-0bd0a4c183e7</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i32" />
             <PropertyValues>
-              <PropertyValue z:Id="i41">
+              <PropertyValue z:Id="i37">
                 <PropertyName>Value</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>parametrs[$"items{i+1}"]</_expression>
@@ -355,7 +318,7 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i42">
+              <PropertyValue z:Id="i38">
                 <PropertyName>To</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>item</_expression>
@@ -371,12 +334,12 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.Assign</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i43" i:type="ExecutedStep">
+          <AbstractStep z:Id="i39" i:type="ExecutedStep">
             <Childs />
             <Id>4b6757ae-8146-4fe6-aea1-b990abe95aa1</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i32" />
             <PropertyValues>
-              <PropertyValue z:Id="i44">
+              <PropertyValue z:Id="i40">
                 <PropertyName>FilePath</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>@"States\Process\SetSetCategory.pix"</_expression>
@@ -384,18 +347,18 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i45">
+              <PropertyValue z:Id="i41">
                 <PropertyName>Parameters</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
                 <_screenShotBase64 i:nil="true" />
                 <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d9p1:ArrayOfArgumentItem">
-                  <d9p1:ArgumentItem z:Id="i46">
+                  <d9p1:ArgumentItem z:Id="i42">
                     <d9p1:ArgumentName>io_Browser</d9p1:ArgumentName>
                     <d9p1:Expression>browser</d9p1:Expression>
                     <d9p1:Type>Web.Core.WebBrowser</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i47">
+                  <d9p1:ArgumentItem z:Id="i43">
                     <d9p1:ArgumentName>in_Category</d9p1:ArgumentName>
                     <d9p1:Expression>"Электроника,Ноутбуки"</d9p1:Expression>
                     <d9p1:Type>System.String</d9p1:Type>
@@ -411,12 +374,12 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i48" i:type="ExecutedStep">
+          <AbstractStep z:Id="i44" i:type="ExecutedStep">
             <Childs />
             <Id>ff4936c5-4496-43ec-91e2-4c5bc5f06318</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i32" />
             <PropertyValues>
-              <PropertyValue z:Id="i49">
+              <PropertyValue z:Id="i45">
                 <PropertyName>FilePath</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>@"States\Process\SetFilter.pix"</_expression>
@@ -424,18 +387,18 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i50">
+              <PropertyValue z:Id="i46">
                 <PropertyName>Parameters</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
                 <_screenShotBase64 i:nil="true" />
                 <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d9p1:ArrayOfArgumentItem">
-                  <d9p1:ArgumentItem z:Id="i51">
+                  <d9p1:ArgumentItem z:Id="i47">
                     <d9p1:ArgumentName>io_Browser</d9p1:ArgumentName>
                     <d9p1:Expression>browser</d9p1:Expression>
                     <d9p1:Type>Web.Core.WebBrowser</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i52">
+                  <d9p1:ArgumentItem z:Id="i48">
                     <d9p1:ArgumentName>in_FiltersValue</d9p1:ArgumentName>
                     <d9p1:Expression>item</d9p1:Expression>
                     <d9p1:Type>Dictionary&lt;System.String, System.String&gt;</d9p1:Type>
@@ -451,12 +414,12 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i53" i:type="ExecutedStep">
+          <AbstractStep z:Id="i49" i:type="ExecutedStep">
             <Childs />
             <Id>4cecfd1c-fee4-40b7-930c-b3092760a869</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i32" />
             <PropertyValues>
-              <PropertyValue z:Id="i54">
+              <PropertyValue z:Id="i50">
                 <PropertyName>FilePath</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>@"States\Process\GetData.pix"</_expression>
@@ -464,28 +427,28 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i55">
+              <PropertyValue z:Id="i51">
                 <PropertyName>Parameters</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
                 <_screenShotBase64 i:nil="true" />
                 <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d9p1:ArrayOfArgumentItem">
-                  <d9p1:ArgumentItem z:Id="i56">
+                  <d9p1:ArgumentItem z:Id="i52">
                     <d9p1:ArgumentName>io_Browser</d9p1:ArgumentName>
                     <d9p1:Expression>browser</d9p1:Expression>
                     <d9p1:Type>Web.Core.WebBrowser</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i57">
+                  <d9p1:ArgumentItem z:Id="i53">
                     <d9p1:ArgumentName>in_FiltersValue</d9p1:ArgumentName>
                     <d9p1:Expression>item</d9p1:Expression>
                     <d9p1:Type>Dictionary&lt;System.String, System.String&gt;</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i58">
+                  <d9p1:ArgumentItem z:Id="i54">
                     <d9p1:ArgumentName>in_ImagePath</d9p1:ArgumentName>
                     <d9p1:Expression>@"C:\Users\60235867\Desktop\img"</d9p1:Expression>
                     <d9p1:Type>System.String</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i59">
+                  <d9p1:ArgumentItem z:Id="i55">
                     <d9p1:ArgumentName>out_Data</d9p1:ArgumentName>
                     <d9p1:Expression>data</d9p1:Expression>
                     <d9p1:Type>Dictionary&lt;System.String, System.Object&gt;</d9p1:Type>
@@ -501,12 +464,12 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i60" i:type="ExecutedStep">
+          <AbstractStep z:Id="i56" i:type="ExecutedStep">
             <Childs />
             <Id>8da87e78-b8f8-4c0c-8917-8e9ca22714a5</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i32" />
             <PropertyValues>
-              <PropertyValue z:Id="i61">
+              <PropertyValue z:Id="i57">
                 <PropertyName>FilePath</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>@"States\Process\CreateReport.pix"</_expression>
@@ -514,23 +477,23 @@
                 <_value i:nil="true" />
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
-              <PropertyValue z:Id="i62">
+              <PropertyValue z:Id="i58">
                 <PropertyName>Parameters</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
                 <_screenShotBase64 i:nil="true" />
                 <_value xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d9p1:ArrayOfArgumentItem">
-                  <d9p1:ArgumentItem z:Id="i63">
+                  <d9p1:ArgumentItem z:Id="i59">
                     <d9p1:ArgumentName>in_ReportPath</d9p1:ArgumentName>
                     <d9p1:Expression>@"C:\Users\60235867\Desktop\report"</d9p1:Expression>
                     <d9p1:Type>System.String</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i64">
+                  <d9p1:ArgumentItem z:Id="i60">
                     <d9p1:ArgumentName>in_Data</d9p1:ArgumentName>
                     <d9p1:Expression>data</d9p1:Expression>
                     <d9p1:Type>Dictionary&lt;System.String, System.Object&gt;</d9p1:Type>
                   </d9p1:ArgumentItem>
-                  <d9p1:ArgumentItem z:Id="i65">
+                  <d9p1:ArgumentItem z:Id="i61">
                     <d9p1:ArgumentName>out_FilePath</d9p1:ArgumentName>
                     <d9p1:Expression>reportPath</d9p1:Expression>
                     <d9p1:Type>System.String</d9p1:Type>
@@ -550,7 +513,7 @@
         <Id>ffa00b6e-621d-4806-a107-e7eb4e02190a</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i66">
+          <PropertyValue z:Id="i62">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>parametrs.Count - 1</_expression>
@@ -558,7 +521,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i67">
+          <PropertyValue z:Id="i63">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>i</_expression>
@@ -574,12 +537,12 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i68" i:type="ExecutedStep">
+      <AbstractStep z:Id="i64" i:type="ExecutedStep">
         <Childs />
         <Id>e1774cb0-1648-4c8a-b6ff-aea7995c004f</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i69">
+          <PropertyValue z:Id="i65">
             <PropertyName>Browser</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>browser</_expression>
@@ -595,7 +558,7 @@
         <Text></Text>
         <_activityFullName>Activities.Web.CloseBrowser</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i70" i:type="ExecutedStep">
+      <AbstractStep z:Id="i66" i:type="ExecutedStep">
         <Childs />
         <Id>7b527b41-ee86-4826-9979-320b280a7983</Id>
         <Parent z:Ref="i2" />
@@ -623,14 +586,14 @@
     <d2p1:string>System.Text.Json</d2p1:string>
   </Namespaces>
   <Params>
-    <Parameter z:Id="i71">
+    <Parameter z:Id="i67">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_TransactionItem</Name>
       <RunnerType>None</RunnerType>
       <TypeString>BR.Master.Queues.QueueItemData</TypeString>
     </Parameter>
-    <Parameter z:Id="i72">
+    <Parameter z:Id="i68">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_Config</Name>

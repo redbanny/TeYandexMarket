@@ -46,6 +46,14 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
+                  <PropertyValue z:Id="i10">
+                    <PropertyName>LaunchArgs</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"--force-renderer-accessibility=complete"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
                 </PropertyValues>
                 <SelectedOptionId>0</SelectedOptionId>
                 <EnableStatus>true</EnableStatus>
@@ -65,14 +73,14 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i10" i:type="ExecutedStep">
+          <AbstractStep z:Id="i11" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i11" i:type="ExecutedStep">
+              <AbstractStep z:Id="i12" i:type="ExecutedStep">
                 <Childs />
                 <Id>75928ce5-5a47-4ae4-a8b6-fc5fc0c8c793</Id>
-                <Parent z:Ref="i10" />
+                <Parent z:Ref="i11" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i12">
+                  <PropertyValue z:Id="i13">
                     <PropertyName>TabHeader</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>$"{in_BrowserTitle}"</_expression>
@@ -80,7 +88,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i13">
+                  <PropertyValue z:Id="i14">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>out_Browser</_expression>
@@ -88,7 +96,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i14">
+                  <PropertyValue z:Id="i15">
                     <PropertyName>Timeout</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>60</_expression>
@@ -104,12 +112,12 @@
                 <Text>Подключиться к открытому браузеру</Text>
                 <_activityFullName>Activities.Web.LaunchChrome</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i15" i:type="ExecutedStep">
+              <AbstractStep z:Id="i16" i:type="ExecutedStep">
                 <Childs />
                 <Id>638553f8-bd56-44b5-8ae2-e4fb0e7bb423</Id>
-                <Parent z:Ref="i10" />
+                <Parent z:Ref="i11" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i16">
+                  <PropertyValue z:Id="i17">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>out_Browser</_expression>
@@ -125,12 +133,12 @@
                 <Text></Text>
                 <_activityFullName>Activities.Web.CreateTab</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i17" i:type="ExecutedStep">
+              <AbstractStep z:Id="i18" i:type="ExecutedStep">
                 <Childs />
                 <Id>8cdcc7c9-3b13-4c90-a520-4016117123e8</Id>
-                <Parent z:Ref="i10" />
+                <Parent z:Ref="i11" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i18">
+                  <PropertyValue z:Id="i19">
                     <PropertyName>TabName</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"Новая вкладка"</_expression>
@@ -138,7 +146,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i19">
+                  <PropertyValue z:Id="i20">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>out_Browser</_expression>
@@ -154,12 +162,12 @@
                 <Text></Text>
                 <_activityFullName>Activities.Web.SwitchToTab</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i20" i:type="ExecutedStep">
+              <AbstractStep z:Id="i21" i:type="ExecutedStep">
                 <Childs />
                 <Id>818ece7f-1e70-4094-83e7-441f7060bf23</Id>
-                <Parent z:Ref="i10" />
+                <Parent z:Ref="i11" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i21">
+                  <PropertyValue z:Id="i22">
                     <PropertyName>URL</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>in_Url</_expression>
@@ -167,7 +175,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i22">
+                  <PropertyValue z:Id="i23">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>out_Browser</_expression>
@@ -198,7 +206,7 @@
         <Id>18e991e4-4a10-46ea-9813-ccdb3d32fa52</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i23">
+          <PropertyValue z:Id="i24">
             <PropertyName>Condition</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>string.IsNullOrWhiteSpace(in_BrowserTitle)</_expression>
@@ -228,21 +236,21 @@
   <Name>ConnectedBrowser.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i24">
+    <Parameter z:Id="i25">
       <DefaultValueExpression>"Детали"</DefaultValueExpression>
       <Description></Description>
       <Name>in_BrowserTitle</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i25">
+    <Parameter z:Id="i26">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>out_Browser</Name>
       <RunnerType>None</RunnerType>
       <TypeString>Web.Core.WebBrowser</TypeString>
     </Parameter>
-    <Parameter z:Id="i26">
+    <Parameter z:Id="i27">
       <DefaultValueExpression>"https://ya.ru"</DefaultValueExpression>
       <Description></Description>
       <Name>in_Url</Name>
